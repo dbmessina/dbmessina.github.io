@@ -1,9 +1,17 @@
+<!DOCTYPE html>
 <html>
-	<head><meta name='viewport' content='width=device-width, initial-scale=1.0' /></head>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<script>
+function pauseVideo() {
+  iframeTag = document.querySelector("iframe"),
+  win = iframeTag.contentWindow;
+  win.postMessage("pauseVideo", "https://players.brightcove.net");
+}
+		</script>
+	</head>
 	<body>
+		<button type="button" onclick="pauseVideo()">Stop</button>
 		<iframe src="https://players.brightcove.net/104403126001/PbSDZ4Djb_default/index.html?videoId=6318009421112&playsinline" allowfullscreen="" allow="encrypted-media" width="960" height="600" ></iframe>
-		<!--<iframe class="mbr-embedded-video" src="https://players.brightcove.net/104403126001/default_default/index.html?videoId=6318009421112&playsinline=true" width="411" height="231" frameborder="0" allowfullscreen style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;"></iframe>
-		<video src="https://players.brightcove.net/104403126001/default_default/index.html?videoId=6318009421112&playsinline=true"></video>
-		<video data-video-id="6318009421112" data-account="104403126001" data-player="nYFsmIoVv5" playsinline></video>-->
 	</body>
 </html>
